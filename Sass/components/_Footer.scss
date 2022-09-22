@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .footer__networks{
+        ul li a svg{
+            height: 50px;
+            .st0{
+                fill: $colorPrimario;
+            }
+            .st1{
+                fill: $colorCuerternario;
+            }
+        }
+    }
+}

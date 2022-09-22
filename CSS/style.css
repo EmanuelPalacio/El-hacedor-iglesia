@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #0b2d48; }
+
+body {
+  display: grid;
+  grid-template-areas: "nav" "main" "footer";
+  grid-template-rows: 15vh auto 40vh;
+  min-height: 100vh; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-size: 2rem;
+    color: #2196f3; }
+  body::-webkit-scrollbar {
+    width: 1rem;
+    /* width of the entire scrollbar */ }
+  body::-webkit-scrollbar-track {
+    background: #ffffff;
+    /* color of the tracking area */ }
+  body::-webkit-scrollbar-thumb {
+    background-color: #2196f3;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #ffffff;
+    /* creates padding around scroll thumb */ }
+
+header {
+  grid-area: "nav"; }
+
+main {
+  grid-area: "main"; }
+
+footer {
+  grid-area: "footer";
+  background-color: #d3eafc; }
+
+nav {
+  height: 100%;
+  position: relative;
+  background-color: #2196f3;
+  color: #ffffff; }
+  nav .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 3%; }
+    nav .menu .menu__item {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffffff; }
+      nav .menu .menu__item .menu__link:link, nav .menu .menu__item .menu__link:visited {
+        color: #ffffff; }
+      nav .menu .menu__item .menu__img img {
+        height: 15vh; }
+    nav .menu .subMenu .subMenu__list {
+      display: none; }
+  nav .wave {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    left: 0;
+    background-image: url("../../image/animaciones/wd1-01.svg");
+    background-repeat: repeat-x;
+    background-size: 800px;
+    animation: wave 8s linear infinite; }
+  nav .wave2 {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    left: 0;
+    opacity: 0.6;
+    background-image: url("../../image/animaciones/wd1-01.svg");
+    background-repeat: repeat-x;
+    background-size: 800px;
+    animation: wave 5s linear infinite -1s; }
+
+@keyframes wave {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 800px 0; } }
+
+@keyframes wave2 {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -100% 0; } }
+
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15vh 5vh 5vh 5vh;
+  text-align: center; }
+  .index p {
+    font-size: 1.2rem; }
+  .index .index__introduction {
+    width: 80%; }
+    .index .index__introduction p {
+      margin-top: 5vh; }
+  .index .index__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 10vh 0;
+    border-radius: 1rem;
+    height: 70vh;
+    background-color: #d3eafc;
+    background-image: url("../../../image/imagenDonation.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    box-shadow: 1px 1px 18px 7px rgba(33, 150, 243, 0.67);
+    animation: shadow 5s linear infinite; }
+    .index .index__message div {
+      display: inherit;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: 400;
+      width: 50%; }
+      .index .index__message div h2 {
+        margin-bottom: 5vh;
+        font-weight: 600; }
+      .index .index__message div p {
+        width: 90%; }
+        .index .index__message div p:nth-child(3) {
+          margin-top: 5vh; }
+
+@keyframes shadow {
+  0% {
+    box-shadow: 1px 1px 18px 7px rgba(33, 150, 243, 0.67); }
+  50% {
+    box-shadow: 1px 1px 100px 38px rgba(33, 150, 243, 0.67); }
+  100% {
+    box-shadow: 1px 1px 18px 7px rgba(33, 150, 243, 0.67); } }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  footer .footer__networks ul li a svg {
+    height: 50px; }
+    footer .footer__networks ul li a svg .st0 {
+      fill: #2196f3; }
+    footer .footer__networks ul li a svg .st1 {
+      fill: #0b2d48; }

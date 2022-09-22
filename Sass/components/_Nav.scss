@@ -1,0 +1,74 @@
+nav {
+    height: 100%;
+    position: relative;
+    background-color: $colorPrimario;
+    color: $colorSecundario;
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 3%;
+        .menu__item{
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $colorSecundario;
+            .menu__link{
+                &:link, &:visited{
+                    color: $colorSecundario;
+                }
+            }
+            .menu__img {
+                img {
+                    height: 15vh;
+                }
+            }
+        }
+        .subMenu{
+            .subMenu__list{
+                display: none;
+            }
+        }
+    }
+    .wave{
+        position: absolute;
+        height: 200%;
+        width: 100%;
+        left: 0;
+        background-image: url("../../image/animaciones/wd1-01.svg");
+        background-repeat: repeat-x;
+        background-size: 800px;
+        animation: wave 8s linear infinite;
+    }
+    .wave2{
+        position: absolute;
+        height: 200%;
+        width: 100%;
+        left: 0;
+        opacity: 0.6;
+        background-image: url("../../image/animaciones/wd1-01.svg");
+        background-repeat: repeat-x;
+        background-size: 800px;
+        animation: wave 5s linear infinite -1s;
+    }
+}
+
+@keyframes wave {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 800px 0;
+    }
+    
+}
+@keyframes wave2 {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -100% 0;
+    }
+    
+}
